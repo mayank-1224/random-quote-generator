@@ -7,7 +7,12 @@ export const randomQuoteSlice = createSlice({
   },
   reducers: {
     generatedQuote: (state, action) => {
-      state.quote = action.payload;
+      console.log(action.payload);
+      if (action.payload.content === undefined) {
+        state.quote = {
+          content: "",
+        };
+      } else state.quote = action.payload;
     },
   },
 });

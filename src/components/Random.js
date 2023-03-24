@@ -56,6 +56,8 @@ const Random = () => {
             <p className="quoteText">
               {loading ? (
                 <p className="loadingText">Loading your random quote...</p>
+              ) : quote.content === "" ? (
+                "No quote found"
               ) : (
                 quote.content
               )}
@@ -69,14 +71,29 @@ const Random = () => {
                   margin: "0 auto",
                 }}
               >
-                - {quote.author}
+                {loading ? (
+                  <p
+                    className="loadingText"
+                    style={{
+                      fontSize: "20px",
+                    }}
+                  >
+                    Loading...
+                  </p>
+                ) : quote.content === "" ? (
+                  ""
+                ) : (
+                  "-" + quote.author
+                )}
               </p>
-              <button
-                className="bookmarkButton"
-                onClick={() => dispatch(addBookmark(quote))}
-              >
-                <img src={bookIcon} alt="bookmark-icon" />
-              </button>
+              {quote.content !== "" && (
+                <button
+                  className="bookmarkButton"
+                  onClick={() => dispatch(addBookmark(quote))}
+                >
+                  <img src={bookIcon} alt="bookmark-icon" />
+                </button>
+              )}
             </div>
           </div>
         </div>
