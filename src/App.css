@@ -86,6 +86,20 @@ button:active {
   box-shadow: 2px 4px 2px rgba(0, 0, 0, 0.25);
 }
 
+.tagSelect:focus {
+  outline: none;
+}
+
+.tagSelect option {
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.tagSelect:hover {
+  cursor: pointer;
+}
+
 .nextButton {
   width: 320px;
   height: 78px;
