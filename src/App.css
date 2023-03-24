@@ -1,38 +1,174 @@
-.App {
+button {
+  border-radius: 2rem;
+  margin: 0.5rem;
+}
+
+button:hover {
+  background-color: #5929ae;
+}
+
+button:active {
+  background-color: #5929ae;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.quoteBox {
+  background-color: #d05252;
+  border-radius: 30px;
+  margin: 10vh 5vw 2vh 5vw;
+  min-height: 298px;
+  max-width: 875px;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 2px 4px 2px rgba(0, 0, 0, 0.25);
+}
+
+.quoteInnerContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* align-items: center; */
+  height: 100%;
+}
+
+.quoteText {
+  display: inline-block;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 60px;
+  color: #fff;
   text-align: center;
+  margin: 2rem 2rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.loadingText {
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 60px;
+  color: black;
+  text-align: center;
+  margin: 2rem 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.authBookmarkContainer {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.bookmarkButton {
+  width: 50px;
+  height: 50px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.bookmarkButton img {
+  width: 22.5px;
+  height: 30px;
+}
+
+.tagSelect {
+  width: 346px;
+  height: 52px;
+  background-color: #d9d9d9;
+  border-radius: 30px;
+  margin: 2rem 0;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 20px;
+  border: none;
+  box-shadow: 2px 4px 2px rgba(0, 0, 0, 0.25);
+}
+
+.nextButton {
+  width: 320px;
+  height: 78px;
+  background-color: #009c51;
+  box-shadow: 2px 4px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 40px;
+  border: none;
+  cursor: pointer;
+}
+
+.nextButton:hover {
+  background-color: #d05252;
+}
+
+.appContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100%;
+  margin: 2rem 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.navbar h1 {
+  font-family: Poppins;
+  font-size: 40px;
+  color: #fff;
+  margin: 0;
+}
+
+.navbar h2 {
+  font-family: Poppins;
+  font-size: 40px;
+  color: #fff;
+  margin: 0;
+}
+
+.navbar h2:hover {
+  color: #d05252;
+}
+
+.navbar h1:hover {
+  color: #d05252;
+}
+
+.links {
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .quoteBox {
+    margin: 8vh 2vw 2vh 2vw;
+    min-height: 298px;
+    height: auto;
   }
-  to {
-    transform: rotate(360deg);
+  .quoteText {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .tagSelect {
+    font-size: 18px;
+    width: 280px;
+  }
+  .nextButton {
+    width: 280px;
+    height: 60px;
+    font-size: 30px;
+  }
+  .navbar h1 {
+    font-size: 35px;
+  }
+  .navbar h2 {
+    font-size: 35px;
   }
 }
