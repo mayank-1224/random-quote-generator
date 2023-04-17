@@ -18,10 +18,10 @@ const Random = () => {
 
   const getQuote = () => {
     setLoading(true);
-    fetch("http://go-dev.greedygame.com/v3/dummy/apps")
+    fetch("https://api.quotable.io/random")
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
+        dispatch(generatedQuote(data));
         setLoading(false);
       });
   };
